@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class LineComparison {
 
-	// UC1 - Calculate length
 	public static void calculateLength() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter X1 value: ");
@@ -15,9 +14,23 @@ public class LineComparison {
 		int x2 = sc.nextInt();
 		System.out.println("Enter Y2 value: ");
 		int y2 = sc.nextInt();
-		
+		System.out.println("Enter X3 value: ");
+		int x3 = sc.nextInt();
+		System.out.println("Enter Y3 value: ");
+		int y3 = sc.nextInt();
+		System.out.println("Enter X4 value: ");
+		int x4 = sc.nextInt();
+		System.out.println("Enter Y4 value: ");
+		int y4 = sc.nextInt();
+
 		double a = (float) Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2) * 1.0);
-		System.out.println("Length of the line = " + a);
+		double b = (double) Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2) * 1.0);
+
+		if (a == b) {
+			System.out.println("Two lines are equal: " + a + " = " + b);
+		} else {
+			System.out.println("Two lines are not equal: " + a + " =  " + b);
+		}
 	}
 
 	public static void main(String[] args) {
